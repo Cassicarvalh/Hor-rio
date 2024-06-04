@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 21-Relógio em JS</title>
+    <link rel="stylesheet" href="css/x21.css">
+    <script type="text/javascript">
+        var loopRelogio = setInterval(relogio, 1000);
+        function relogio(){
+            atual = new Date();
+            hora = atual.getHours();
+            minuto = atual.getMinutes();
+            segundo = atual.getSeconds();
+
+            imprimirHora = hora + " : " + minuto + " : " + segundo;
+            document.getElementById("relogioAuto").innerHTML = imprimirHora;
+
+        }
+        function mouseOver(){
+            document.getElementById("relogioAuto").style.color = "red";
+            document.getElementById("relogioAuto").style.fontSize = "56px;"
+        }
+        function mouseOut(){
+            document.getElementById("relogioAuto").style.color = "black";
+            document.getElementById("relogioAuto").style.fontSize = "24px;"
+        
+
+
+        function mudarDeCor(){
+            if(newColor===newColor){
+                newColor=getRandomColor();
+                return newColor
+            }
+            
+            
+        }
+    }
+        
+
+    
+
+    </script>
+</head>
+<body>
+    <h1>Aqui está o relógio a funcionar automaticamente... </h1>
+    <p id="relogioAuto" onmouseOver="mouseOver()" onmouseOut="mouseOut()"></p>
+    
+</body>
+</html>
